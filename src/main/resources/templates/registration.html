@@ -1,0 +1,219 @@
+<html th:replace="base::layout(~{::section})">
+
+<head></head>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<script src="js/bootstrap.bundle.js"></script>
+
+<body>
+	<section>
+		<div class="row px-3 py-2">
+			<div class="col-sm-12 bg-orange py-5" style="border-radius: 10px; ">
+				<h1 class="text-center" style="color: white;">Student Registration</h1>
+				<h5 class="text-center">
+					<a href="/">
+						<i class="fa-solid fa-house home-icon"></i>
+					</a>
+				</h5>
+				<div th:if="${msg}" class="alert alert-warning alert-dismissible fade show mx-auto w-60" style="text-align: center;">
+					<b th:text ="${msg}"></b>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					
+				</div>
+			</div>
+
+
+		</div>
+		<form th:object="${dto}" method="post">
+			<div class="row py-5">
+				<div class="col-sm-10 mx-auto shadow-lg py-3 px-4 pb-5">
+					<div class="row py-3">
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Enrollment No <span class="text-danger">*</span></label>
+							<input type="text" th:field="${dto.enrollmentno}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your enrollment number...">
+								
+									<p th:if="${#fields.hasErrors('enrollmentno')}" class="text-danger" th:erros="${dto.enrollmentno}"></p>
+								
+						</div>
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Name <span class="text-danger">*</span></label>
+							<input type="text" th:field="${dto.name}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your Name...">
+						</div>
+					</div>
+					<div class="row py-3">
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Contact No. <span class="text-danger">*</span></label>
+							<input type="number" th:field="${dto.contactno}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your contact number...">
+						</div>
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Whatsapp No. <span class="text-danger">*</span></label>
+							<input type="number" th:field="${dto.whatsappno}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your Whatsapp No...">
+						</div>
+
+					</div>
+					<div class="row py-3">
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Email <span class="text-danger">*</span></label>
+							<input type="email" th:field="${dto.email}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your email...">
+						</div>
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Password<span class="text-danger">*</span></label>
+							<input type="password" th:field="${dto.password}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your password...">
+						</div>
+
+					</div>
+					<div class="row py-3">
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">College Name<span class="text-danger">*</span></label>
+							<select th:field="${dto.collegename}" class="form-control rounded-0 border border-black">
+								<option value="">-Select Your College </option>
+								<option value="Babu Banarsi Das Institute of Technology Management,Lucknow">Babu Banarsi Das Institute of Technology Management,Lucknow</option>
+								<option value="Shri Ram swaroop Memorial University,Lucknow">Shri Ram swaroop Memorial University,Lucknow</option>
+								<option value="Babu Banarsi Das University,Lucknow">Babu Banarsi Das University,Lucknow</option>
+
+
+							</select>
+						</div>
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Course <span class="text-danger">*</span></label>
+							<select th:field="${dto.course}" class="form-control rounded-0 border border-black">
+								<option value="">-Select Course </option>
+								<option value="Diploma">Diploma</option>
+								<option value="B.Tech">B.Tech</option>
+								<option value="BCA">BCA</option>
+
+
+							</select>
+						</div>
+
+					</div>
+					<div class="row py-3">
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Branch<span class="text-danger">*</span></label>
+							<select th:field="${dto.branch}" class="form-control rounded-0 border border-black">
+								<option value="">-Select Your Branch </option>
+								<option value="Computer Science">Computer Science</option>
+								<option value="Electronics">Electronics</option>
+								<option value="Electrical">Electrical</option>
+
+
+							</select>
+						</div>
+						<div class="col-sm-6">
+							<label class="fw-bold py-2">Year <span class="text-danger">*</span></label>
+							<select th:field="${dto.year}" class="form-control rounded-0 border border-black">
+								<option value="">-Select Year </option>
+								<option value="First Year">1<sup>st</sup>Year</option>
+								<option value="Second Year">2<sup>nd</sup>Year</option>
+								<option value="Third Year">3<sup>rd</sup>Year</option>
+								<option value="Fourth Year">4<sup>th</sup>Year</option>
+
+								
+
+							</select>
+						</div>
+
+					</div>
+
+
+				</div>
+				<div class="col-sm-10 mx-auto">
+					<h2 class="fw-bold py-3">Academic Details</h2>
+				</div>
+				<div class="col-sm-10 mx-auto shadow-lg bg-white py-3 px-4">
+					<h3 class="text-orange fw-bold">Performance</h3>
+					<hr>
+					<div class="row ">
+						<div class="col-sm-6 py-3">
+							<label class="fw-bold py-2">10<sup>th</sup> <span
+									class="text-danger">*</span>Percentage</label>
+							<input type="text" th:field="${dto.highschoolp}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your 10th marks...">
+						</div>
+						<div class="col-sm-6 py-3">
+							<label class="fw-bold py-2">12<sup>th</sup> <span class="text-danger">*</span>
+								Percentage</label>
+							<input type="text" th:field="${dto.intermediatep}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your 12th marks...">
+						</div>
+						<div class="col-sm-12 py-3">
+							<label class="fw-bold py-2">Aggregates marks<span class="text-danger">*</span> </label>
+							<input type="text" th:field="${dto.aggregatemarks}" class="form-control rounded-0 border border-black"
+								placeholder="Enter your aggregates marks...">
+						</div>
+
+					</div>
+				</div>
+				<div class="col-sm-10 mx-auto">
+					<h2 class="fw-bold py-3">Training Details</h2>
+				</div>
+				<div class="col-sm-10 mx-auto shadow-lg bg-white py-3 px-4">
+					<h3 class="text-orange fw-bold">Performance</h3>
+					<hr>
+					<div class="row ">
+						<div class="col-sm-6 py-3">
+							<label class="fw-bold py-2">
+								Do you want to register for<span class="text-danger">*</span></label>
+							<select th:field="${dto.trainingmode}" class="form-control rounded-0 border border-black">
+								<option value="">-Select Your Training Mode </option>
+								<option value="Online">Online Mode</option>
+								<option value="Offline">Offline Mode</option>
+
+							</select>
+						</div>
+						<div class="col-sm-6 py-3">
+							<label class="fw-bold py-2"> What is your Preferred Training Location<span
+									class="text-danger">*</span>
+							</label>
+							<select th:field="${dto.traininglocation}" class="form-control rounded-0 border border-black">
+								<option value="">-Select Your Location</option>
+								<option value="Softpro House,Jankipuram,Near Gudamba Thana">Softpro House,Jankipuram,Near Gudamba Thana</option>
+								<option value="Softpro India Skill Development Center,greater Noida">Softpro India Skill Development Center,greater Noida</option>
+								<option value="Softpro India Full Stack Academy,Chinhat Tiraha,Gomti Nagar,Lucknow">Softpro India Full Stack Academy,Chinhat Tiraha,Gomti Nagar,Lucknow</option>
+								<option value="Polyprep-LMS(Online platform)">Polyprep-LMS(Online platform)</option>
+
+
+							</select>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-sm-10 mx-auto pt-4">
+					<input type="checkbox" required="required">
+					<i class="fw-bold">I hereby declare that the particulars provided in the form are correct and I duly
+						agree to the privacy of the comapny</i>
+				</div>
+				<div class="col-sm-10 mx-auto pt-4 text-end">
+					<button type="submit" class=" bg-danger fs-5 fw-bold rounded-0 py-2 py-2">Submit</button>
+					<button type="reset" class=" btn btn-secondary fs-5 fw-bold rounded-0 py-2 py-2">Reset</button>
+
+				</div>
+			</div>
+
+		</form>
+		<style>
+			.home-icon {
+				display: inline-block;
+				border: 1px solid;
+				padding: 10px;
+				border-radius: 6px;
+				color: white;
+				transition: 0.5s;
+			}
+
+			.home-icon:hover {
+				transition: 0.5s;
+				color: maroon;
+				background-color: white;
+
+                 }
+		</style>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<html th:replace="base::layout(~{::section})">
+
+<head>
+
+</head>
+
+<body>
+	<section>
+
+		<div class="row px-3 py-2 ">
+			<div class="col-sm-12  py-4 bg-orange pb-5 mx-auto  ">
+				<h1 class="text-center text-white fw-bold">~Contact Us~</h1>
+				<hr>
+				<h5 class="text-center">
+					<a href="/">
+						<i class="fa-solid fa-house home-icon"></i>
+					</a>
+				</h5>
+
+				<div th:if="${msg}" class="alert alert-warning alert-dismissible fade show w-50 mx-auto">
+					<b th:text="${msg}"></b>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+
+			</div>
+
+
+		</div>
+		<form th:object="${dto}" method="post">
+			<div class="row px-3 py-2">
+				<div class="col-sm-10 shadow-lg py-3 px-4 pb-5 mx-auto">
+					<div class="row py-3">
+						<div class="col-sm-6">
+
+							<img alt="image not found" src="images/Contact Us.jpg" height="55%" width="90%"><br>
+
+							<br>
+							<label class="textarea fw-bold">Send a Message To Enquiry<span style="color: red;">*</span>
+
+							</label><br>
+							<textarea id="textarea" th:field="${dto.enquirytext}" required="required"
+								placeholder="Enter Your Message..." rows="8" cols="60"></textarea>
+
+						</div>
+						<div class="col-sm-6">
+							<h4 class="fw-bold">Have a Question? Connect to our team of <br>
+								<center>Experts!</center>
+							</h4>
+							<label class="fw-bold py-2">Name<span class="text-danger">*</span></label>
+							<input type="text" th:field="${dto.name}" required="required"
+								class="form-control rounded-0 border border-black" placeholder="Enter Your Name.."><br>
+							<label class="fw-bold py-2">Contact Number<span class="text-danger">*</span></label>
+							<input type="number" th:field="${dto.contactno}" required="required"
+								class="form-control rounded-0 border border-black"
+								placeholder="Enter Your Contact Number">
+							<br>
+							<label class="fw-bold py-2">Email<span class="text-danger">*</span></label>
+							<input type="email" th:field="${dto.email}"
+								class="form-control rounded-0 border border-black" placeholder="Enter Your Email...">
+
+							<br>
+							<label class="fw-bold py-2">College Name<span class="text-danger">*</span></label>
+							<select th:field="${dto.collegename}" class="form-control rounded-0 border border-black">
+								<option value="">-Select Your College </option>
+								<option value="Babu Banarsi Das Institute of Technology Management,Lucknow">Babu Banarsi
+									Das Institute of Technology Management,Lucknow</option>
+								<option value="Shri Ram swaroop Memorial University,Lucknow">Shri Ram swaroop Memorial
+									University,Lucknow</option>
+								<option value="Babu Banarsi Das University,Lucknow">Babu Banarsi Das University,Lucknow
+								</option>
+								<option value="Babu Banarsi Das Institute of Technology Management,Lucknow">Not
+									Applicable </option>
+
+							</select>
+
+							<br>
+							<label class="fw-bold py-2">Address<span class="text-danger">*</span></label>
+							<input type="text" th:field="${dto.address}" required="required"
+								class="form-control rounded-0 border border-black" placeholder="Enter Your Address">
+							<br>
+							<label class="fw-bold py-2">Enquiry Date<span class="text-danger">*</span></label>
+							<input type="date" th:field="${dto.enquirydate}" required="required"
+								class="form-control rounded-0 border border-black" placeholder="Enter Your Date">
+							<br>
+
+						</div>
+
+
+					</div>
+					<div>
+					<div class="col-sm-10 mx-auto pt-4 text-end">
+						<button type="submit" style="color: white;"class=" bg-orange fs-5 fw-bold rounded-0 py-2 px-2 ">Submit</button>
+						<button type="reset" class=" btn btn-secondary fs-5 fw-bold rounded-0 py-2 px-2">Clear</button>
+
+					</div>
+		</form>
+		<style>
+			.h1 {
+				font-family: cursive;
+			}
+		</style>
+	</section>
+</body>
+
+</html>

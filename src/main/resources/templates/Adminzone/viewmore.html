@@ -1,0 +1,84 @@
+<html th:replace="~{Adminzone/adminbase::layout(~{::section})}">
+
+<head>
+	<title>Online Test Portal Admin Zone</title>
+
+</head>
+
+<body>
+	<section>
+		<h1 style="text-align: center; color:white ;background-color: maroon;" class="container-fluid">Student View More
+			Page data</h1>
+		<div class="row">
+
+
+			<div class="row">
+				<div class="col-sm-2 mx-2 p-3 shadow">
+					<img alt="image not found" class="w-100" src="../images/logo1.png">
+
+				</div>
+				<div class="col-sm-9 mx-3 p-3 shadow">
+					<label class="fw-bold">Student Name:</label>
+					<span th:text="${stdInfo.name}"></span>
+					<br>
+					<label class="fw-bold">Mo/Number:</label>
+					<span th:text="${stdInfo.contactno}"></span>
+					<br>
+					<label class="fw-bold">Email:</label>
+					<span th:text="${stdInfo.email}"></span>
+					<br>
+
+					<label class="fw-bold">Registration Date:</label>
+					<span th:text="${stdInfo.regdate}"></span>
+					<br>
+
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-sm-12 mx-1 p-3 shadow" style="width: 94%;">
+					<div class=" mx-auto">
+						<label class="fw-bold">Year:</label>
+						<span th:text="${stdInfo.year}"></span>
+						<br>
+						<label class="fw-bold" > Branch:</label>
+						<span th:text="${stdInfo.branch}"></span>
+						<br>
+						<label class="fw-bold">Enrollment Number:</label>
+						<span th:text="${stdInfo.enrollmentno}"></span>
+						<br>
+						<label class="fw-bold">Course:</label>
+						<span th:text="${stdInfo.course}"></span>
+						<br>
+						<label class="fw-bold">Whatsapp No:</label>
+						<span th:text="${stdInfo.whatsappno}"></span>
+						<br>
+						<label class="fw-bold">College Name:</label>
+						<span th:text="${stdInfo.collegename}"></span>
+						<br>
+						<label class="fw-bold">High School Marks:</label>
+						<span th:text="${stdInfo.highschoolp}"></span>
+						<br>
+						<label class="fw-bold">Intermediate Marks:</label>
+						<span th:text="${stdInfo.intermediatep}"></span>
+						<br>
+						<label class="fw-bold">Training Location:</label>
+						<span th:text="${stdInfo.traininglocation}"></span>
+						<br>
+						<label class="fw-bold">Training Mode:</label>
+						<span th:text="${stdInfo.trainingmode}"></span>
+						<br>
+
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</section>
+</body>
+
+
+</html>

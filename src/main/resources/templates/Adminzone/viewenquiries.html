@@ -1,0 +1,51 @@
+<html th:replace="~{Adminzone/adminbase::layout(~{::section})}">
+
+<head>
+</head>
+
+<body>
+	<section>
+		<h1 style="text-align: center;">Manage all student </h1>
+
+		<div class="row">
+			<div class="col-sm-11 mx-auto">
+				<table class="table table-bordered" id="mytable">
+					<thead class="table-danger">
+						<tr>
+							<th>Name</th>
+							
+							<th>Email</th>
+							<th>Contact No</th>
+							<th>Enquiry Message</th>
+							<th>Delete</th>
+
+						</tr>
+					</thead>
+					<tbody class="text-center">
+						<tr th:each="e:${eliList}">
+							<td th:text="${e.name}">Piya</td>
+								<td th:text="${e.email}">piya123@gmail.com</td>
+							<td th:text="${e.contactno}">87635763</td>
+							<td th:text="${e.enquirytext}">this is something</td>
+
+							
+							
+							<td class="text-center">
+								<a href="#" class="text-decoration-none">
+									<button class="bg-white border border-0">
+										<i class="fa-solid fa-trash fs-4" style="color: #f20707;"></i>
+
+									</button>
+								</a>
+							</td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</section>
+</body>
+
+</html>

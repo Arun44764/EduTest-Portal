@@ -1,0 +1,157 @@
+<html th:replace="base::layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Online Exam Portal - Our Services</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+	<!-- Header -->
+	<div class="header">
+		<h1>Welcome to EduTest Online Exam Portal</h1>
+		<p>Your one-stop solution for hassle-free online examinations</p>
+		<a href="/dashboard">Go to Dashboard</a>
+	</div>
+
+	<!-- Services Section -->
+	<section class="services">
+		<!-- Service 1 -->
+		<div class="service-card">
+			<i class="fas fa-laptop"></i>
+			<h3>Online Exams</h3>
+			<p>Conduct secure and efficient online exams with advanced proctoring features.</p>
+		</div>
+		<!-- Service 2 -->
+		<div class="service-card">
+			<i class="fas fa-file-alt"></i>
+			<h3>Practice Tests</h3>
+			<p>Access a wide range of practice tests to improve your skills and knowledge.</p>
+		</div>
+		<!-- Service 3 -->
+		<div class="service-card">
+			<i class="fas fa-chart-line"></i>
+			<h3>Performance Analytics</h3>
+			<p>Track your progress and analyze your performance with detailed insights.</p>
+		</div>
+		<!-- Service 4 -->
+		<div class="service-card">
+			<i class="fas fa-users"></i>
+			<h3>Collaborative Learning</h3>
+			<p>Engage in group learning sessions and enhance your knowledge collaboratively.</p>
+		</div>
+		<!-- Service 5 -->
+		<div class="service-card">
+			<i class="fas fa-user-shield"></i>
+			<h3>Secure Environment</h3>
+			<p>Experience a cheat-proof exam environment with AI-based monitoring.</p>
+		</div>
+		<style>
+			/* Global Styles */
+			body {
+				font-family: 'Arial', sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f9f9f9;
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+
+			/* Header Section */
+			.header {
+				background-color: #4CAF50;
+				color: white;
+				text-align: center;
+				padding: 30px 15px;
+			}
+
+			.header h1 {
+				font-size: 2.5rem;
+				margin: 0;
+			}
+
+			.header p {
+				font-size: 1.2rem;
+				margin: 5px 0;
+			}
+
+			.header a {
+				color: white;
+				font-size: 1.5rem;
+				padding: 10px 15px;
+				border: 2px solid white;
+				border-radius: 5px;
+				transition: all 0.3s ease;
+			}
+
+			.header a:hover {
+				background-color: white;
+				color: #4CAF50;
+			}
+
+			/* Services Section */
+			.services {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 20px;
+				padding: 40px 15px;
+				background-color: #f9f9f9;
+			}
+
+			.service-card {
+				background-color: white;
+				border: 1px solid #ddd;
+				border-radius: 10px;
+				padding: 20px;
+				width: 300px;
+				text-align: center;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.service-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+			}
+
+			.service-card i {
+				font-size: 3rem;
+				color: #4CAF50;
+				margin-bottom: 15px;
+			}
+
+			.service-card h3 {
+				font-size: 1.5rem;
+				margin: 15px 0;
+			}
+
+			.service-card p {
+				font-size: 1rem;
+				color: #555;
+			}
+
+			/* Footer Section */
+			.footer {
+				background-color: #4CAF50;
+				color: white;
+				text-align: center;
+				padding: 15px 0;
+				margin-top: 20px;
+			}
+
+			.footer p {
+				margin: 0;
+			}
+		</style>
+	</section>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,50 @@
+body{
+	font-family: monotype corsive;
+}
+.bg-orange {
+	background-color:darkblue;
+}
+
+.bg-gray {
+	background-color: #f4f2f2dd;
+}
+
+
+.text-orange{
+	color:darkred;
+}
+
+.btn-orange {
+	background-color: orangered;
+	color: white;
+}
+
+.btn-orange:hover {
+	background-color: orangered;
+	color: white;
+}
+
+
+/*Nav Top Icon CSS*/
+.top-icon ul{
+	display: flex;	
+}
+
+.top-icon ul li{
+	list-style-type: none;
+}
+
+.top-icon ul li a{
+	text-decoration: none;
+	color: white;
+	background-color: orangered;
+	margin: 4px;
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 17px;
+	
+}
