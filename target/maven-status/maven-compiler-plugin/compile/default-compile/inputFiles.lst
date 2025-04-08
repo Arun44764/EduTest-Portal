@@ -1,0 +1,17 @@
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\API\SendEmailService.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\controller\AdminController.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\controller\MainController.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\controller\StudentController.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\Dto\AdminInfoDto.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\Dto\EnquiryDto.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\Dto\QuestionBankDto.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\Dto\StudentInfoDto.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\model\AdminInfo.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\model\Enquiry.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\model\QuestionBank.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\model\StudentInfo.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\OnlineTestPortalApplication.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\Repositary\AdminInfoRepo.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\Repositary\EnquiryRepo.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\Repositary\QuestionBankRepo.java
+D:\SpringBootProject\OnlineTestPortal\src\main\java\com\otp\OnlineTestPortal\Repositary\StudentInfoRepo.java

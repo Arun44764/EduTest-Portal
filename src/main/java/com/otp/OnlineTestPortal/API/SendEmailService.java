@@ -5,6 +5,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import jakarta.mail.Message;
+
 @Service
 public class SendEmailService {
 
@@ -26,4 +28,22 @@ public class SendEmailService {
 	    msg.setText(message);
 	    MailSender.send(msg);
 	}
+	
+	
+	public void SendTestId(String name,long testid,
+			String testname,String starttime,String mailTo)
+	{
+		String subject="Test Details From BBDITM LUCKNOW EDUTEST PORTAL";
+		String message = "Hello  Dear, " + name
+				+ "\n BBDITM LUcknow EDUTEST portal has been scheduled a test for you \n Please login on Softpro Online Test portal by using your credentials \n You can access test through the test id \n \n Test ID ="
+				+ testid + "\n Test Name =" + testname + "\n Test Start Date and Time =" +starttime + " \n\n Thank you";
+		SimpleMailMessage msg = new SimpleMailMessage();
+
+		msg.setTo(mailTo);
+		msg.setSubject(subject);
+		msg.setText(message);
+		MailSender.send(msg);
+		
+	}
 }
+

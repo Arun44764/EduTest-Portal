@@ -120,7 +120,8 @@ public class MainController {
 			{
 			if(stdinfo.getStatus().equals("true"))	
 			{
-				redirectAttributes.addFlashAttribute("msg","Valid user");
+				//redirectAttributes.addFlashAttribute("msg","Valid user");
+				session.setAttribute("student", stdinfo.getEmail());
 				return "redirect:/studentzone/stdhome";
 
 			}

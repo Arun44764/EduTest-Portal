@@ -1,0 +1,74 @@
+<html th:replace="~{Adminzone/adminbase::layout(~{::section})}">
+
+<head>
+	<title>Online Test Portal Admin Zone</title>
+</head>
+
+<body>
+	<section>
+		<h1 style="text-align: center;color:white ;background-color: maroon;"> MANAGE All STUDENT's</h1>
+		<div class="row">
+			<div class="col-sm-11 mx-auto">
+				<table class="table table-bordered" id="mytable">
+					<thead class="table-danger">
+						<tr>
+							<th>Name</th>
+                             <th>Enrollment No.</th>
+							<th>Email Id</th>
+							<th>Contact No.</th>
+							<th>View More</th>
+							<th>Edit</th>
+							<th>Delete</th>
+							<th>Status</th>
+
+						</tr>
+					</thead>
+					<tbody class="text-center">
+
+						<!--s humesha single letter me hi rahege, th:each:- one by one loop kaam krega -->
+						<tr th:each="s:${stdlist}" style="border-bottom:1px solid ">
+							<td th:text="${s.name}">Arun Sahani</td>
+                            <td th:text="${s.enrollmentno}"></td>
+							<td th:text="${s.email}">arunsahani4476@gmail.com</td>
+							<td th:text="${s.contactno}">6387192685</td>
+							<td class="text-center">
+								<a th:href="@{viewmore(email=${s.email})}">View More</a>
+							</td>
+							
+							
+                          <td class="text-center">
+							<a href="#">
+								<i class="fa-solid fa-pen-to-square" style="color: #104f03;"></i>
+							</a>
+							
+						  </td>
+
+							<td class="text-center">
+								<a th:href="@{delete1(email=${s.email})}" class="text-decoration-none">
+									<button class="bg-white border border-0"
+										onclick="return confirm('Are You sure to delete')">
+										<i class="fa-solid fa-trash fs-4" style="color: #fa0000;"></i>
+
+									</button>
+								</a>
+							</td>
+							<td class="text-center">
+								 <a th:href="@{checkstatus(email=${s.email})}" class="btn btn-success">
+                             <span>Approved</span>
+
+									
+							</td>
+
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<style>
+
+		</style>
+	</section>
+</body>
+
+</html>

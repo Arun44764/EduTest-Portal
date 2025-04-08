@@ -1,6 +1,7 @@
 package com.otp.OnlineTestPortal.Dto;
 
 public class QuestionBankDto {
+	private int id;
 	private String Year;
 	private String question;
 	private String a;
@@ -8,6 +9,12 @@ public class QuestionBankDto {
 	private String c;
 	private String d;
 	private String correct;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getYear() {
 		return Year;
 	}
@@ -50,5 +57,6 @@ public class QuestionBankDto {
 	public void setCorrect(String correct) {
 		this.correct = correct;
 	}
-
+	
+	
 }

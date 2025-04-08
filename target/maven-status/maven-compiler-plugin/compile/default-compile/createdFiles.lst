@@ -1,0 +1,17 @@
+com\otp\OnlineTestPortal\Repositary\QuestionBankRepo.class
+com\otp\OnlineTestPortal\model\AdminInfo.class
+com\otp\OnlineTestPortal\model\StudentInfo.class
+com\otp\OnlineTestPortal\Repositary\AdminInfoRepo.class
+com\otp\OnlineTestPortal\controller\AdminController.class
+com\otp\OnlineTestPortal\model\QuestionBank.class
+com\otp\OnlineTestPortal\Dto\QuestionBankDto.class
+com\otp\OnlineTestPortal\Dto\AdminInfoDto.class
+com\otp\OnlineTestPortal\API\SendEmailService.class
+com\otp\OnlineTestPortal\OnlineTestPortalApplication.class
+com\otp\OnlineTestPortal\controller\MainController.class
+com\otp\OnlineTestPortal\Repositary\EnquiryRepo.class
+com\otp\OnlineTestPortal\Repositary\StudentInfoRepo.class
+com\otp\OnlineTestPortal\model\Enquiry.class
+com\otp\OnlineTestPortal\Dto\EnquiryDto.class
+com\otp\OnlineTestPortal\controller\StudentController.class
+com\otp\OnlineTestPortal\Dto\StudentInfoDto.class

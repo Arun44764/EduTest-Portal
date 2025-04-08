@@ -1,0 +1,135 @@
+<html th:replace="~{Adminzone/adminbase:: layout(~{::section})}">
+	<head>
+	</head>
+	<body>
+		<section>
+			<div class="container-fluid">
+						Helpline Info 
+						<marquee>
+							<h4 class="text-center mt-2">For any query, reach us through helpline number
+								<i class="fa-solid fa-phone" style="color: orangered;"></i>
+								<span style="color:orangered;">9454084445</span> or email us at
+								<i class="fa-solid fa-envelope" style="color: #f74002;"></i>
+								<span style="color:orangered;"> hr@softproindia.in</span>
+							</h4>
+						</marquee>
+
+						Profile Section 
+					<div class="row">
+							<div class="col-sm-5">
+								<div class="shadow p-4" style="border:1px solid lightgrey; border-radius:5px;">
+									<h3 class="text-center" style="color: orangered;">Hello, Welcome back!</h3>
+									<hr>
+									<div class="text-center">
+										<div style="height:200px; width:200px; margin:0 auto;">
+											<img alt="Profile Picture" th:if="${ad.profilepic}"
+												th:src="@{'/profiles/' + ${ad.profilepic}}"
+												style="height:100%; width:100%; border-radius:10px; border:1px solid lightgrey;">
+											<img alt="Default Picture" th:unless="${ad.profilepic}" src="../assest/img/user.jpg"
+												style="height:100%; width:100%; border-radius:10px; border:1px solid lightgrey;">
+										</div>
+									</div>
+
+									<form action="/Adminzone/adhome" method="POST" enctype="multipart/form-data">
+										<span th:text="${ad.name}" id="name"></span>
+										<div class="mb-3 mt-4 text-center">
+											<label for="profilepic" class="form-label" style="font-size: 20px;">Upload New Profile Picture</label>
+											<input type="file" id="profilepic" name="profilepic" class="form-control w-65 mx-auto" style="margin-top: 20px;"
+												accept=".jpg,.jpeg,.png,.webp" required>
+										</div>
+										<button class="btn w-45" type="submit" style="background-color:orangered;color:white; margin-left: 150px; margin-top: 20px;">
+											Upload Profile
+										</button>
+									</form>
+								</div>
+							</div>
+
+							Other Details Section 
+							<div class="col-sm-7">
+								<div class="shadow p-3" style="border:1px solid lightgrey; border-radius:5px;">
+									<h3 class="text-center" style="color: orangered;">Your Details</h3>
+									<hr>
+									<div class="details">
+										<table>
+											<tr>
+												<th>Name</th>
+												<td th:text="${ad.name}">Shri Ram Swaroop Memorial University, Lucknow</td>
+											</tr>
+											
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+					<style>
+						body {
+							font-family: Arial, sans-serif;
+							background-color: #f4f4f4;
+							margin: 0;
+							padding: 0;
+						}
+
+						.container {
+							max-width: 800px;
+							margin: 40px auto;
+							background-color: #fff;
+							border-radius: 8px;
+							box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+							overflow: hidden;
+						}
+
+						.header {
+							padding: 15px;
+							color: white;
+							text-align: center;
+						}
+
+						.header h3 {
+							margin: 0;
+							font-size: 22px;
+						}
+
+						.details {
+							padding: 20px;
+						}
+
+						.details table {
+							width: 100%;
+							border-collapse: collapse;
+						}
+
+						.details th,
+						.details td {
+							text-align: left;
+							padding: 10px;
+							border-bottom: 1px solid #ddd;
+						}
+
+						.details th {
+							color: #333;
+							width: 35%;
+						}
+
+						.details td {
+							color: #555;
+						}
+
+						.details tr:last-child td {
+							border-bottom: none;
+						}
+						#name{
+							text-align: center;
+							color:orangered;
+							font-size: 35px;
+							font-weight: bold;
+							margin-left: 200px;
+						}
+					</style>
+		</section>
+	</body>
+
+</html>

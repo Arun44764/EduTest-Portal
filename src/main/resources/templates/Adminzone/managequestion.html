@@ -1,0 +1,57 @@
+<html th:replace="~{Adminzone/adminbase::layout(~{::section})}">
+	
+<head>
+</head>
+
+<body>
+	<section>
+		<h1 style="text-align: center;">Manage Question Bank </h1>
+
+		<div class="row">
+			<div class="col-sm-11 mx-auto">
+				<table class="table table-bordered">
+					<thead class="table-danger">
+						<tr>
+							<th>Year</th>
+							
+							<th>Question</th>
+							<th>Option A</th>
+							<th>Option B</th>
+							<th>Option C</th>
+							<th>Option D</th>
+							<th>Current Answer</th>
+							<th>Delete</th>
+
+
+						</tr>
+					</thead>
+					<tbody class="text-center">
+						<tr th:each="qbinfo:${qList}">
+							<td th:text="${qbinfo.year}"></td>
+								<td th:text="${qbinfo.question}"></td>
+							<td th:text="${qbinfo.a}"></td>
+							<td th:text="${qbinfo.b}"></td>
+							<td th:text="${qbinfo.c}"></td>
+							<td th:text="${qbinfo.d}"></td>
+							<td th:text="${qbinfo.correct}"></td>
+							<td class="text-center">
+								<a href="#" class="text-decoration-none">
+									<button class="bg-white border border-0">
+										<i class="fa-solid fa-trash fs-4" style="color: #f20707;"></i>
+
+									</button>
+								</a>
+							</td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</section>
+</body>
+
+
+
+</html>
